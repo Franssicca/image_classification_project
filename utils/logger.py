@@ -3,7 +3,6 @@
 """
 
 import os
-import time
 import logging
 from datetime import datetime
 from config.config import Config
@@ -31,6 +30,12 @@ class Logger:
     
     def info(self, message):
         self.logger.info(message)
+    
+    def warning(self, message):  # 👈 新增这个方法
+        self.logger.warning(message)
+    
+    def error(self, message):
+        self.logger.error(message)
 
 class AverageMeter:
     """计算平均值"""
